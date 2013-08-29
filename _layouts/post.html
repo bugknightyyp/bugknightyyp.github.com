@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="row">
+	<div class="col-lg-3">ss</div>
+	<div class="col-lg-9">{{ content }}</div>
+</div>
+
+<!--for syntax hight light-->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shAutoloader.min.js"></script>
+<script>
+function path()
+{
+  var args = arguments,
+      result = []
+      ;
+       
+  for(var i = 0; i < args.length; i++)
+      result.push(args[i].replace('@', 'http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/') + ".min.js");
+       
+  return result
+};
+ 
+SyntaxHighlighter.autoloader.apply(null, path(
+  'applescript            @shBrushAppleScript',
+  'actionscript3 as3      @shBrushAS3',
+  'bash shell             @shBrushBash',
+  'coldfusion cf          @shBrushColdFusion',
+  'cpp c                  @shBrushCpp',
+  'c# c-sharp csharp      @shBrushCSharp',
+  'css                    @shBrushCss',
+  'delphi pascal          @shBrushDelphi',
+  'diff patch pas         @shBrushDiff',
+  'erl erlang             @shBrushErlang',
+  'groovy                 @shBrushGroovy',
+  'java                   @shBrushJava',
+  'jfx javafx             @shBrushJavaFX',
+  'js jscript javascript  @shBrushJScript',
+  'perl pl                @shBrushPerl',
+  'php                    @shBrushPhp',
+  'text plain             @shBrushPlain',
+  'py python              @shBrushPython',
+  'ruby rails ror rb      @shBrushRuby',
+  'sass scss              @shBrushSass',
+  'scala                  @shBrushScala',
+  'sql                    @shBrushSql',
+  'vb vbnet               @shBrushVb',
+  'xml xhtml xslt html    @shBrushXml'
+));
+SyntaxHighlighter.all();
+</script>

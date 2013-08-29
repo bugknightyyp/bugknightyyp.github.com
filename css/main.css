@@ -1,0 +1,10 @@
+
+
+.high-light-area{
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 1em 2em;
+  background-color: #adadad;
+}
+footer{border-top:1px solid #E5E5E5;text-indent:100px;}
