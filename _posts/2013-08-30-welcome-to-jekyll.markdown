@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2013-08-30 10:15:40
+date:   2013-08-30 10:15:40 +0800
 tags: me blog
 categories: html5 webgl
 ---
