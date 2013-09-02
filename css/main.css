@@ -1,5 +1,5 @@
 
-
+body{background:url(/img/bg/bg-body-repeat.png) left top repeat #ffffff}
 .high-light-area{
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -7,4 +7,10 @@
   padding: 1em 2em;
   background-color: #adadad;
 }
-footer{border-top:1px solid #E5E5E5;text-indent:100px;}
+header{background-color:#ffffff;border-bottom: 1px solid #D9D9D9; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 -1px 0 transparent inset;font-size:16px;}
+header ul{ margin-bottom:0;margin-left:80px;}
+header  li{ line-height:20px; padding:20px 30px !important;}
+header  li a{color:#333333;}
+header  li.on{background-color: #D1C091;box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.125) inset;}
+header  li.on a{color:#ffffff;}
+footer{background-color:#ffffff;text-indent:100px;}

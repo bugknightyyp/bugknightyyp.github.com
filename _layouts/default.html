@@ -7,8 +7,6 @@
         <meta name="viewport" content="width=device-width">
 		<!--reset default style-->
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css">
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
@@ -16,7 +14,35 @@
     </head>
     <body>
 		<header>
-			<nav><ul><li><a href="/">首页</a></li></ul></nav>
+			<nav><ul class="list-unstyled list-inline">
+				<li 
+					{% if page.name == null %}
+					   class="on"
+					{% endif %}>
+					<a href="/">index</a>
+				</li>
+				<li 
+					{% if page.name == 'categories' %}
+					   class="on"
+					{% endif %}>
+					<a href="/categories">categories</a>
+				</li>
+				<li 
+					{% if page.name == 'archive' %}
+					   class="on"
+					{% endif %}>
+					<a href="/archive">archive</a>
+				</li>
+				<li 
+					{% if page.name == 'tags' %}
+					   class="on"
+					{% endif %}>
+					<a href="/tags">tags</a>
+				</li>
+				
+			
+
+			</ul></nav>
 		</header>
         <div class="container">
           {{ content }}

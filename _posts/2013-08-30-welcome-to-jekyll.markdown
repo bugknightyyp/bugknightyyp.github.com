@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2013-08-29 10:15:40
-tags: me
-categories: html5 canvas
+date:   2013-08-30 10:15:40
+tags: me blog
+categories: html5 webgl
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
@@ -37,6 +37,6 @@ function parseOutputBuffer($buf) {
 </pre>
 </div>
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
-
+<div>page path:{{ page.path }}</div>
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
