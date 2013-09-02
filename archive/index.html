@@ -10,7 +10,7 @@ name: archive
 
 
 {% for post in site.posts %}
-	{% capture the_month %}{{ post.date | %a }}{% endcapture %}
+	{% capture the_month %}{{ post.date }}{% endcapture %}
 	<h3>{{ the_month }}</h3>
 	<ul>
 		
