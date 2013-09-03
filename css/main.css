@@ -17,6 +17,10 @@ header  li.on a{color:#ffffff;}
 footer{ background-color: #3F3F3F;color: #FFFFFF;height: 100px;}
 .state{padding-top:30px;text-align:center;}
 
+.mark-list{}
+.mark-list h2{font-size:16px;}
+.mark-list h3{font-size:14px;margin:0 0 10px 0;}
+
 .post-name{font-size:20px; text-align:center;border-bottom:1px solid #E2E2E2;padding-bottom:20px;}
 
 .container {min-height:800px;}
