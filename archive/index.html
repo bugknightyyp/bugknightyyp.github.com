@@ -4,15 +4,33 @@ title: all  categories
 name: archive
 ---
 
-
-
-
-
+<div class="list-topic">
+{% assign previous_month = null %}
+{% assign month_num = 0 %}
+{% assign month_str = "<ul>" %}
 
 {% for post in site.posts %}
-	{% capture the_month %}{{ post.date }}{% endcapture %}
-	<h3>{{ the_month }}</h3>
-	<ul>
-		
-	</ul>
+	{% capture the_month %}{{ post.date | date:"%Y - %B" }}{% endcapture %}
+	
+	{% if previous_month != the_month and previous_month != null %}
+			{% capture month_str %}{{ month_str }} </ul>{% endcapture %}
+			<h3>{{ previous_month }}<span>{{ month_num }}</span></h3>
+			{{ month_str }}
+			
+			{% assign previous_month = the_month %}	
+			{% assign month_num = 0 %}
+			{% assign month_str = "<ul>" %}
+	{% else %}	
+		{% assign previous_month = the_month %}	
+	{% endif %}
+	
+	
+	{% capture month_str %}{{ month_str }} <li>{{ post.date | date_to_string }} » <a href="{{ post.url }}">{{ post.title }}</a></li>{% endcapture %}
+	{% capture month_num %}{{ month_num | plus:1 }}{% endcapture %}
+	
 {% endfor %}
+
+
+<h3>{{ previous_month }}<span>{{ month_num }}</span></h3>
+{{ month_str }}
+</div>

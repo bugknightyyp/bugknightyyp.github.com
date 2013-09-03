@@ -6,7 +6,7 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 		<!--reset default style-->
-		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
@@ -22,6 +22,12 @@
 					<a href="/">index</a>
 				</li>
 				<li 
+					{% if page.name == 'tags' %}
+					   class="on"
+					{% endif %}>
+					<a href="/tags">tags</a>
+				</li>
+				<li 
 					{% if page.name == 'categories' %}
 					   class="on"
 					{% endif %}>
@@ -33,28 +39,23 @@
 					{% endif %}>
 					<a href="/archive">archive</a>
 				</li>
-				<li 
-					{% if page.name == 'tags' %}
-					   class="on"
-					{% endif %}>
-					<a href="/tags">tags</a>
-				</li>
+				
 				
 			
 
 			</ul></nav>
 		</header>
-        <div class="container">
-          {{ content }}
+        <div class="container bgffffff">
+			<div class="row">
+				<div class="col-lg-12">
+					{{ content }}
+				</div>
+			</div>
+          
         </div> <!-- /container -->
 		<footer class="footer">
-			power by github
-			<div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
+			<div class="state">power by github<br />
+			To pay tribute to OPEN SOURCE</div>
 		</footer>
     </body>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

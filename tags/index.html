@@ -3,17 +3,23 @@ layout: default
 title: all  categories
 name: tags
 ---
-
-
-  
+<div class="tag-cloud">
+	<ul class="list-inline">
+	{% for tag in site.tags %}
+	<li><a href="#{{ tag[0] }}">{{ tag[0] }}</a><span>{{ tag[1] | size }}</span></li>
+	{% endfor %}
+	</ul>
+</div>
+<div class="list-topic">
 
 {% for tag in site.tags %}
-	<h3>{{ tag[0] }}</h3>
+	<h3 id="{{ tag[0] }}">{{ tag[0] }}<span>{{ tag[1] | size }}</span></h3>
 	<ul>
 		{% for post in  tag[1]  %}
 			<li>
-				<a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+				{{ post.date | date_to_string }} » <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
 			</li>
 		{% endfor %}
 	</ul>
 {% endfor %}
+</div>

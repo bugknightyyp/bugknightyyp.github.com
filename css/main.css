@@ -1,5 +1,6 @@
 
 body{background:url(/img/bg/bg-body-repeat.png) left top repeat #ffffff}
+.bgffffff{background-color:#ffffff;}
 .high-light-area{
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -7,10 +8,24 @@ body{background:url(/img/bg/bg-body-repeat.png) left top repeat #ffffff}
   padding: 1em 2em;
   background-color: #adadad;
 }
-header{background-color:#ffffff;border-bottom: 1px solid #D9D9D9; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 -1px 0 transparent inset;font-size:16px;}
+header{background-color:#ffffff;border-bottom: 1px solid #D9D9D9; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 -1px 0 transparent inset;font-size:16px;position:relative;z-index:100;}
 header ul{ margin-bottom:0;margin-left:80px;}
 header  li{ line-height:20px; padding:20px 30px !important;}
 header  li a{color:#333333;}
 header  li.on{background-color: #D1C091;box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.125) inset;}
 header  li.on a{color:#ffffff;}
-footer{background-color:#ffffff;text-indent:100px;}
+footer{ background-color: #3F3F3F;color: #FFFFFF;height: 100px;}
+.state{padding-top:30px;text-align:center;}
+
+.post-name{font-size:20px; text-align:center;border-bottom:1px solid #E2E2E2;padding-bottom:20px;}
+
+.container {min-height:800px;}
+.list-topic{}
+.list-topic  h3{font-size:16px;}
+.list-topic  h3 span{position:relative; top:-8px;left:2px; background-color:#E2E2E2;padding:0 5px;border-radius:5px;font-size:12px;}
+
+.tag-cloud{padding:30px 0 10px;}
+.tag-cloud  li a{background-color:#E2E2E2;padding:3px 8px;border-radius:5px;color:#005F6B;}
+.tag-cloud  li span{background-color:#E2E2E2;position:relative; top:-8px;left:-3px;padding:0 5px;border-radius:5px;font-size:12px;color:#005F6B;}
+
+.pagenation{ padding:20px 50px;border-top:1px solid #E2E2E2;margin-top:20px;}

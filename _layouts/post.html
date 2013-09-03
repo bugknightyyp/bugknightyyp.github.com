@@ -1,15 +1,27 @@
 ---
 layout: default
-name: post
 ---
+<h1 class="post-name">{{ page.title }}</h1>
 <div class="row">
 	<div class="col-lg-3">ss</div>
 	<div class="col-lg-9">{{ content }}</div>
 </div>
 
+	<div class="pagenation">
+		{% if page.previous %}
+	    	<a class="btn btn-success pull-left"  href="{{ page.previous.url }}" rel="bookmark" style="float:right">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>
+	    {% endif %}
+	    {% if page.next %}
+	      <a class="btn btn-success pull-right" href="{{ page.next.url }}" rel="bookmark">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>
+	    {% endif %}
+	    
+  	</div>
+	    
+	    
+
 <!--for syntax hight light-->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.min.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeMidnight.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shAutoloader.min.js"></script>
 <script>
