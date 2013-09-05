@@ -1,5 +1,5 @@
 
-body{background:url(/img/bg/bg-body-repeat.png) left top repeat #ffffff}
+body{background:url(/img/bg/bg-body-repeat.png) left top repeat #ffffff;min-height:800px;}
 .bgffffff{background-color:#ffffff;}
 .high-light-area{
   -moz-border-radius: 5px 5px 5px 5px;
@@ -24,7 +24,7 @@ footer{ background-color: #3F3F3F;color: #FFFFFF;height: 100px;}
 
 .post-name{font-size:20px; text-align:center;border-bottom:1px solid #E2E2E2;padding-bottom:20px;}
 
-.container {min-height:800px;}
+.container {}
 .list-topic{}
 .list-topic  h3{font-size:16px;}
 .list-topic  h3 span{position:relative; top:-8px;left:2px; background-color:#E2E2E2;padding:0 5px;border-radius:5px;font-size:12px;}
@@ -34,3 +34,5 @@ footer{ background-color: #3F3F3F;color: #FFFFFF;height: 100px;}
 .tag-cloud  li span{background-color:#E2E2E2;position:relative; top:-8px;left:-3px;padding:0 5px;border-radius:5px;font-size:12px;color:#005F6B;}
 
 .pagenation{ padding:20px 50px;border-top:1px solid #E2E2E2;margin-top:20px;overflow:hidden;}
+
+.front-web-layer{position:absolute; top:0;z-index:200;width:1170px;margin: 0 auto;}
