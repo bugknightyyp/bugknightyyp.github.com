@@ -1,0 +1,26 @@
+---
+layout: default
+title: all  categories
+name: categories
+---
+<div class="tag-cloud">
+	<ul class="list-inline">
+	{% for category in site.categories %}
+	<li><a href="#{{ category[0] }}">{{ category[0] }}</a><span>{{ category[1] | size }}</span></li>
+	{% endfor %}
+	</ul>
+</div>
+
+  
+<div class="list-topic">
+{% for category in site.categories %}
+	<h3 id="{{ category[0] }}">{{ category[0] }}<span>{{ category[1] | size }}</span></h3>
+	<ul>
+		{% for post in  category[1]  %}
+			<li>
+				{{ post.date | date_to_string }} » <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endfor %}
+</div>
