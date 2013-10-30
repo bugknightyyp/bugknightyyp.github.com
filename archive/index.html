@@ -13,7 +13,7 @@ name: archive
     
     {% if previous_month != the_month and previous_month != null %}
             {% capture month_str %}{{ month_str }} </ul>{% endcapture %}
-            <h3>{{ previous_month }}<span>{{ month_num }}</span></h3>
+            <h3>{{ previous_month }}:<span class="count-num">{{ month_num }}</span></h3>
             {{ month_str }}
             
             {% assign previous_month = the_month %} 
@@ -30,6 +30,6 @@ name: archive
 {% endfor %}
 
 
-<h3>{{ previous_month }}<span>{{ month_num }}</span></h3>
+<h3>{{ previous_month }}:<span class="count-num">{{ month_num }}</span></h3>
 {{ month_str }}
 </div>

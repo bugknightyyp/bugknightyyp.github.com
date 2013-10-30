@@ -1,14 +1,15 @@
 ---
-layout: test-case
+layout: post
 title:  "the event of focus and mousedown is difference on behavior betwen ie6/7/8 and modern broswer"
 date:   2013-09-15 12:04:02 +0800
-tags: bug ie6/7/8
 categories: test-case
+tags: ie-6-7-8
+model: compatible
 ---
 <style>
 .con{width:800px; font-size:14px;}
-.content{ height:250px; padding:10px 0;position:relative;}
-.content ol{position: absolute;right:0;top:0;}
+.test-case{ padding:10px 0;position:relative;}
+.test-case ol{position: absolute;right:0;top:0;}
 .txt{width:200px; height:30px;border:1px solid #cccccc}
 .wrap{width:200px;height:200px;border:1px solid #cccccc;}
 
@@ -16,7 +17,7 @@ categories: test-case
 </style>
 <div class="con">
 
-  <div class="content">
+  <div class="test-case">
     <ol id="log_1" class="pull-right"></ol>
     <input type="text" class="txt" id="txt_1" value="我是输入框"/>
     <div class="wrap" id="wrap_1">输入框获得焦点后，点击我，在所有浏览器下，输入框都失去焦点</div>
@@ -52,7 +53,7 @@ categories: test-case
   </div>
   
   
-  <div class="content">
+  <div class="test-case">
     
     <input type="text" class="txt" id="txt_2" value="我是输入框" />
     <div class="wrap" id="wrap_2">输入框获得焦点后，点击我，在ie6/7/8下，输入框会失去焦点，其他标准浏览器输入框不会失去焦点</div>  

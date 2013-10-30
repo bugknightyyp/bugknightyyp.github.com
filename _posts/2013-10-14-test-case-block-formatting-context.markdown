@@ -1,8 +1,8 @@
 ---
-layout: test-case
+layout: post
 title:  "the test cases for block formatting context"
 date:   2013-10-14 11:04:15 +0800
-tags: BFC
+tags: BFC  
 categories: test-case
 ---
 <style>
